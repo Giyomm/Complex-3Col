@@ -14,10 +14,22 @@ public class Main {
 		Graphe g3 = new Graphe(a3, 4, 6);
 		
 		try {
-			g1.estTroisCol("g1");
-			g2.estTroisCol("g2");
-			g3.estTroisCol("g3");
-		} catch (IOException e) {
+			if (g1.estTroisCol("g1"))
+				System.out.println("Le graphe g1 est 3-coloriables : " + g1.getSommets().toString());
+			else
+				System.out.println("Le graphe g1 n'est pas 3-coloriables.");
+
+			if (g2.estTroisCol("g2"))
+				System.out.println("Le graphe g2 est 3-coloriables : " + g2.getSommets().toString());
+			else
+				System.out.println("Le graphe g2 n'est pas 3-coloriables.");
+
+			if (g3.estTroisCol("g3"))
+				System.out.println("Le graphe g3 est 3-coloriables : " + g3.getSommets().toString());
+			else
+				System.out.println("Le graphe g3 n'est pas 3-coloriables.");
+
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
